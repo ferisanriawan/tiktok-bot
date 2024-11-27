@@ -32,7 +32,7 @@ if mode == 1 or mode == 2 or mode == 3 or mode == 4:
     chrome_options.add_argument("--mute-audio")
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-    driver = webdriver.Chrome( options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
     driver.set_window_size(1024, 650)
 
     metric1 = 0
@@ -54,4 +54,4 @@ def update_title2(): # Update the title IF option 2 was picked.
     
     while True:
         time_elapsed = strftime('%H:%M:%S', gmtime(time() - start))
-        system(f'title PROGRAM_NAME ^| Metric 2: {beautify(metric2
+        system(f'title PROGRAM_NAME ^| Metric 2: {beautify(metric2)} ^| Elapsed Time: {time_elapsed}')
